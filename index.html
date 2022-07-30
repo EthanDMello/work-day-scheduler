@@ -4,6 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
+      integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+    ></script>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -28,10 +42,34 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container">
+    <div timeBlock class="timeBlockContainer">
+      <ul class="hoursList">
+        <li>9AM</li>
+        <li>10AM</li>
+        <li>11AM</li>
+        <li>12AM</li>
+        <li>1pM</li>
+        <li>2PM</li>
+        <li>3PM</li>
+        <li>4PM</li>
+        <li>5PM</li>
+      </ul>
+      <ol class="timeBlockList">
+        <li class="blockListItem">number 1</li>
+        <li class="blockListItem">number 2</li>
+        <li class="blockListItem">number 3</li>
+        <li class="blockListItem">number 4</li>
+        <li class="blockListItem">number 5</li>
+        <li class="blockListItem">number 2</li>
+        <li class="blockListItem">number 2</li>
+        <li class="blockListItem">number 2</li>
+        <li class="blockListItem">number 2</li>
+      </ol>
       <!-- Timeblocks go here -->
     </div>
 
+    <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   </body>

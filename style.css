@@ -1,5 +1,10 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1;
 }
@@ -68,4 +73,27 @@ textarea {
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+}
+
+.timeBlockContainer {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  height: 700px;
+  grid-template-rows: 100px;
+  column-gap: 0px;
+  border-top: 1px solid black;
+}
+
+.timeBlockContainer li {
+  display: flex;
+  height: 5rem;
+  border: 1px solid black;
+}
+
+.timeBlockList {
+  list-style: none;
+}
+
+.hoursList {
+  list-style: none;
 }
