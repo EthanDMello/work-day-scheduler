@@ -86,8 +86,18 @@ textarea {
 
 .timeBlockContainer li {
   display: flex;
+  align-items: center;
+  text-align: justify;
   height: 5rem;
   border: 1px solid black;
+}
+
+.timeBlockContainer input {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  border: 1px solid black;
+  width: 100%;
 }
 
 .timeBlockList {

@@ -23,7 +23,7 @@ timeOfDay = {
 };
 function checkTime() {
   let listScheduleAr = document.querySelectorAll(".blockListItem");
-  let currentTimeRaw = moment("14:00", "hh:mm");
+  let currentTimeRaw = moment();
   let currentTime = currentTimeRaw.format("HH");
   console.log(currentTime, Object.values(timeOfDay));
   Object.values(timeOfDay).forEach((hour, i) => {
