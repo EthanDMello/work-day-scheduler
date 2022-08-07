@@ -62,22 +62,9 @@ textarea {
   color: white;
 }
 
-.saveBtn {
-  border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #06aed5;
-  color: white;
-}
-
-.saveBtn i:hover {
-  font-size: 20px;
-  transition: all 0.3s ease-in-out;
-}
-
 .timeBlockContainer {
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 1fr 4fr 1fr;
   height: 700px;
   grid-template-rows: 100px;
   column-gap: 0px;
@@ -98,6 +85,28 @@ textarea {
   height: 5rem;
   border: 1px solid black;
   width: 100%;
+}
+
+.timeBlockContainer button {
+  display: grid;
+  /* font-size: 5rem; */
+  padding: 0px;
+  width: 100%;
+}
+
+.saveBtn {
+  border-left: 1px solid black;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #06aed5;
+  color: white;
+  font-size: 4.75rem;
+  outline: none;
+}
+
+.saveBtn i:active {
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
 .timeBlockList {

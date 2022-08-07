@@ -6,10 +6,6 @@ function currentDate() {
   $("#currentDay").text("Today is : " + date.format("dddd"));
 }
 
-currentDate();
-
-$(".timeBlockList").sortable();
-
 timeOfDay = {
   0: 9,
   1: 10,
@@ -29,19 +25,34 @@ function checkTime() {
   Object.values(timeOfDay).forEach((hour, i) => {
     if (hour < currentTime) {
       let count = i + 1;
-      $("ol li:nth-child(" + count + ")").css("background-color", "#a6a6a6");
-      console.log(i);
+      $(".blockListItem:nth-child(" + count + ")").css(
+        "background-color",
+        "#a6a6a6"
+      );
+      console.log(i, "past");
     } else if (hour == currentTime) {
       let count = i + 1;
-      $("ol li:nth-child(" + count + ")").css("background-color", "#f5b0ab");
-      console.log(i);
+      $(".blockListItem:nth-child(" + count + ")").css(
+        "background-color",
+        "#f5b0ab"
+      );
+      console.log(i, "present");
     } else {
       let count = i + 1;
-      $("ol li:nth-child(" + count + ")").css("background-color", "#b7f7bc");
-      console.log(i);
+      $(".blockListItem:nth-child(" + count + ")").css(
+        "background-color",
+        "#b7f7bc"
+      );
+      console.log(i, "future");
     }
   });
 }
 
+function buttonClicked(event) {
+  event.preventDefault();
+}
+
+$("button").on("click", buttonClicked(this));
+currentDate();
 checkTime();
-let something = timeBlockList.eq(0);
+// let something = timeBlockList.eq(0);
