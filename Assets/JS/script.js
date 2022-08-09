@@ -48,9 +48,26 @@ function checkTime() {
   });
 }
 
+function loadSchedule() {}
+function saveSchedule() {
+  $("button").click(function () {
+    console.log("button clicked");
+  });
+  listAr = $(".blockListItem");
+  listAr.forEach(function () {
+    text = textContent.value;
+    console.log(text);
+  });
+}
+
+if (localStorage.getItem("textSchedule") === "") {
+  localStorage.setItem("textSchedule");
+}
+
 $("button").click(function (event) {
   event.preventDefault();
 });
-
+saveSchedule();
+loadSchedule();
 currentDate();
 checkTime();
