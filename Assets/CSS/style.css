@@ -94,6 +94,10 @@ textarea {
   width: 100%;
 }
 
+.blockListItem {
+  font-size: 2rem;
+}
+
 .saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;

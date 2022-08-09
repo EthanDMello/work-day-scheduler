@@ -48,11 +48,9 @@ function checkTime() {
   });
 }
 
-function buttonClicked(event) {
+$("button").click(function (event) {
   event.preventDefault();
-}
+});
 
-$("button").on("click", buttonClicked(this));
 currentDate();
 checkTime();
-// let something = timeBlockList.eq(0);
