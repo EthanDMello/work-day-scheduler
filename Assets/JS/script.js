@@ -1,5 +1,17 @@
 timeBlockArea = $(".timeBlockContainer");
 timeBlockList = $("timeBlockLists");
+if (localStorage.getItem("textSchedule") === null) {
+  let textSchedule = [];
+  let textScheduleStr = JSON.stringify(textSchedule);
+  localStorage.setItem("textSchedule", textScheduleStr);
+} else {
+  let textSchedule = JSON.parse(localStorage.getItem("textSchedule"));
+  textSchedule.forEach((textContent, i) => {
+    if (textContent === null) return;
+    let newItem = $(".blockListItem")[i];
+    newItem.setAttribute("value", textContent);
+  });
+}
 
 function currentDate() {
   let date = moment();
@@ -21,7 +33,6 @@ function checkTime() {
   let listScheduleAr = document.querySelectorAll(".blockListItem");
   let currentTimeRaw = moment();
   let currentTime = currentTimeRaw.format("HH");
-  console.log(currentTime, Object.values(timeOfDay));
   Object.values(timeOfDay).forEach((hour, i) => {
     if (hour < currentTime) {
       let count = i + 1;
@@ -29,44 +40,42 @@ function checkTime() {
         "background-color",
         "#a6a6a6"
       );
-      console.log(i, "past");
     } else if (hour == currentTime) {
       let count = i + 1;
       $(".blockListItem:nth-child(" + count + ")").css(
         "background-color",
         "#f5b0ab"
       );
-      console.log(i, "present");
     } else {
       let count = i + 1;
       $(".blockListItem:nth-child(" + count + ")").css(
         "background-color",
         "#b7f7bc"
       );
-      console.log(i, "future");
     }
   });
 }
 
 function loadSchedule() {}
+
 function saveSchedule() {
   $("button").click(function () {
     console.log("button clicked");
+    document.querySelectorAll(".blockListItem").forEach((textContent, i) => {
+      if (textContent.value == "") return;
+      text = textContent.value;
+      let textSchedule = JSON.parse(localStorage.getItem("textSchedule"));
+      textSchedule[i] = text;
+      let textScheduleStr = JSON.stringify(textSchedule);
+      localStorage.setItem("textSchedule", textScheduleStr);
+    });
   });
-  listAr = $(".blockListItem");
-  listAr.forEach(function () {
-    text = textContent.value;
-    console.log(text);
-  });
-}
-
-if (localStorage.getItem("textSchedule") === "") {
-  localStorage.setItem("textSchedule");
 }
 
 $("button").click(function (event) {
   event.preventDefault();
 });
+
 saveSchedule();
 loadSchedule();
 currentDate();
