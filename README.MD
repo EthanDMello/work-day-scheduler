@@ -1,7 +1,7 @@
 #A Work Day Scheduler
 
 Complete homework portfolio project with HTML, CSS and Javascript files to fit the assessment criteria.
-A Work Day Scheduler
+A Work Day Scheduler with save buttons and shading to indicate time of day.
 
 Made by Ethan D'Mello
 Github: https://github.com/EthanDMello
